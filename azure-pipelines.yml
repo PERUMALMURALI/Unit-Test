@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: AndroidBuild@1
+- task: WindowsMachineFileCopy@1
   inputs:
     workingDirectory: ''
     gradleWrapperFile: 'gradlew'
