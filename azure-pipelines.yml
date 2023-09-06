@@ -21,9 +21,3 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'build'
-- task: JFrogGenericArtifacts@1
-  inputs:
-    command: 'Upload'
-    connection: 'Mavan'
-    specSource: 'taskConfiguration'
-    failNoOp: true
