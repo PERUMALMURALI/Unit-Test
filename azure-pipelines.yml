@@ -1,10 +1,4 @@
 # Gradle
-- task: JFrogGenericArtifacts@1
-  inputs:
-    command: 'Upload'
-    connection: 'Mavan'
-    specSource: 'taskConfiguration'
-    failNoOp: true
 # Build your Java project and run tests with Gradle using a Gradle wrapper script.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
@@ -27,3 +21,9 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'build'
+- task: JFrogGenericArtifacts@1
+  inputs:
+    command: 'Upload'
+    connection: 'Mavan'
+    specSource: 'taskConfiguration'
+    failNoOp: true
